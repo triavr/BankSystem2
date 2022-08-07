@@ -1,8 +1,10 @@
 package com.example.servingwebcontent.model;
 
 import com.example.servingwebcontent.Entity.CustomerEntity;
+import com.example.servingwebcontent.Entity.Role;
 
 import java.rmi.server.UID;
+import java.util.Set;
 import java.util.UUID;
 
 public class Customer {   //создаем модель для обмена данных между сервисом и клиентом
@@ -34,5 +36,11 @@ public class Customer {   //создаем модель для обмена да
 
     public void setCustomerName(String customerName) {
         this.customerName = customerName;
+    }
+
+    public Object getUsername() {
+    }
+
+    public void setRoles(Set<Role> role_customer) {
     }
 }
