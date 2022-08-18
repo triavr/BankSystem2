@@ -19,7 +19,7 @@ public class BillEntity {
     private Date createDateTime;
 
     @ManyToOne
-    @JoinColumn(name = "customer_id") // указываем поле, по которому таблицы связаны
+    @JoinColumn(mappedBy="customer_id", fetch=FetchType.LAZY) // указываем поле, по которому таблицы связаны
     private CustomerEntity customer;
 
     public BillEntity() {
